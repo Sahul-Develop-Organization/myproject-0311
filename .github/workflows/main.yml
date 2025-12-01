@@ -1,1 +1,18 @@
-
+name: Workflow to run linux commands
+on: workflow_dispatch # to manually trigger the workflow from GitHub UI
+jobs:
+  job1:
+    name: Run Linux Commands
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run linux command
+        run: echo "Hello All"
+  job2:
+    name: Run another set of Linux Commands
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Run multiple linux command
+        run: |
+          hostname -s
+          echo "Thank you All"
+        
